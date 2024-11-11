@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script> <!-- Inclua a biblioteca jsPDF -->
+    <title>Pedido de Mercadorias</title>
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+    <h1>Pedido de Mercadorias</h1>
+    <br>
+    <div class="download-link">
+        <a href="index2.html">
+            <img src="./imagens/icon.jpg" alt="Ícone do APK" width="50" height="50">
+            Baixar arquivo APK
+        </a>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Produto</th>
+                <th>Pedido.</th>
+                <th>Em Estoque</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Item 1 - 10Kg</td>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Item 2 - 15Kg</td>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Item 3 - 20Kg</td>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Item 4 - 10Kg</td>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Item 5 - 20Kg</td>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Item 5 - 10Kg</td>
+                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <label for="observacao">Observação:</label>
+    <br>
+    <textarea id="observacao" rows="5" placeholder="Digite aqui sua observação..."></textarea>
+
+    <br><button onclick="gerarResumo()">Gerar Resumo</button><br>
+
+    <div id="summaryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSummary()">&times;</span>
+            <h2>Resumo do Pedido</h2>
+            <p id="summaryItems"></p>
+            <p><strong>Observação:</strong></p>
+            <p id="summaryObservation"></p>
+            <button onclick="closeSummary()">Modificar Pedido</button>
+            <button onclick="enviarPedido()">Enviar para o WhatsApp</button>
+            <button onclick="gerarPDF()">Baixar PDF</button> <!-- Botão para gerar PDF -->
+        </div>
+    </div>
+   
+    <script src="./js/script.js"></script>
+
+<footer class="footer">
+    <div class="wrapper">
+        <div class="icons facebook">
+            <div class="tooltip">Facebook</div>
+            <span><i class="fa-brands fa-facebook-f"></i></span>
+        </div>
+        <div class="icons instagram">
+            <div class="tooltip">Instagram</div>
+            <span><i class="fa-brands fa-instagram"></i></span>
+        </div>
+        
+</footer>
+    
+<div class="footer">
+    <p>Entre em contato: <a href="mailto:jrdias32@gmail.com">Junior Dias</a></p>
+</div>
+</body>
+</html>

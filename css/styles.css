@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.instructions {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.action-button img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.action-button:hover {
+    background-color: #45a049;
+}
+
+.action-button span {
+    font-weight: bold;
+}
+
+.step {
+    margin-bottom: 20px;
+}
+
+.step h2 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.step p {
+    margin: 10px 0;
+    color: #555;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.instruction-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+}
+
+/* Consultas de mídia para responsividade */
+@media (max-width: 768px) {
+    .instructions {
+        width: 100%;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .step h2 {
+        font-size: 1.1em;
+    }
+
+    .action-button {
+        flex-direction: column; /* Ajusta para empilhar o conteúdo em telas menores */
+    }
+
+    .action-button img {
+        margin-right: 0;
+        margin-bottom: 5px; /* Espaço entre imagem e texto no modo empilhado */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .step h2 {
+        font-size: 1em;
+    }
+
+    .instructions {
+        padding: 10px;
+        box-shadow: none; /* Remove sombra para simplificar em dispositivos menores */
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
